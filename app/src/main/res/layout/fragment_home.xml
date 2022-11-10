@@ -33,9 +33,10 @@
         android:queryHint="@string/search"
         android:searchIcon="@drawable/ic_search"
         android:theme="@style/ThemeOverlay.search"
+        app:layout_constraintBottom_toBottomOf="@+id/l1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv1" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -44,7 +45,7 @@
         android:layout_margin="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/search_view" />
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
 
     <LinearLayout
         android:id="@+id/l1"
