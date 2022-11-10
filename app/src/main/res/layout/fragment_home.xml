@@ -28,7 +28,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10sdp"
-        android:layout_marginBottom="1dp"
         android:background="#000000"
         android:iconifiedByDefault="false"
         android:queryHint="@string/search"
