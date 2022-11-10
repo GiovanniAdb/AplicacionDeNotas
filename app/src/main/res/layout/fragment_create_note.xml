@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/ColorBlackNote"
     tools:context=".MainActivity">
 
     <ImageView
@@ -13,11 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/ColorWhite" />
+        app:tint="@color/ColorPurpleNote" />
 
     <ImageView
         android:id="@+id/imgDone"
@@ -25,11 +24,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
         android:src="@drawable/ic_tick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/ColorWhite" />
+        app:tint="@color/ColorPurpleNote" />
 
 
     <EditText
@@ -87,7 +85,7 @@
             android:layout_width="@dimen/_5sdp"
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/_5sdp"
-            android:background="@color/ColorBlue" />
+            android:background="@color/ColorCyberpunk" />
 
         <EditText
             android:id="@+id/etNoteSubTitle"
@@ -113,70 +111,70 @@
         app:layout_constraintTop_toBottomOf="@id/l1">
 
 
-
         <ImageView
             android:id="@+id/imgNote"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_300sdp"
-            android:visibility="gone"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp" />
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/imgDelete"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
-            android:layout_marginEnd="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_alignParentEnd="true"
-            android:visibility="gone"
             android:layout_alignParentTop="true"
-            android:src="@drawable/ic_delete" />
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone" />
 
 
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/layoutWebUrl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/layoutWebUrl"
+        android:layout_margin="@dimen/_10sdp"
         android:background="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
         android:padding="@dimen/_10sdp"
         android:visibility="gone"
-        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutImage"
-        android:orientation="vertical">
+        app:layout_constraintTop_toBottomOf="@id/layoutImage">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-        <EditText
-            android:id="@+id/etWebLink"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:fontFamily="@font/manrope_regular"
-            android:hint="@string/web_url"
-            android:inputType="textMultiLine"
-            android:padding="@dimen/_10sdp"
-            android:text="http://"
-            android:textColor="@color/ColorWhite"
-            android:textColorHint="@color/ColorGray"
-            android:textSize="@dimen/_12ssp" />
-        <ImageView
-            android:id="@+id/imgUrlDelete"
-            android:layout_width="@dimen/_24sdp"
-            android:layout_height="@dimen/_24sdp"
-            android:visibility="gone"
-            android:src="@drawable/ic_baseline_cancel_24" />
-    </LinearLayout>
+            android:gravity="center"
+            android:orientation="horizontal">
 
+            <EditText
+                android:id="@+id/etWebLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:fontFamily="@font/manrope_regular"
+                android:hint="@string/web_url"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/_10sdp"
+                android:text="http://"
+                android:textColor="@color/ColorWhite"
+                android:textColorHint="@color/ColorGray"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageView
+                android:id="@+id/imgUrlDelete"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="gone" />
+        </LinearLayout>
 
 
         <LinearLayout
@@ -189,27 +187,27 @@
 
 
             <Button
+                android:id="@+id/btnCancel"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_30sdp"
-                android:fontFamily="@font/manrope_bold"
                 android:background="@color/colorAccent"
+                android:fontFamily="@font/manrope_bold"
                 android:text="@string/cancel"
-                android:textSize="@dimen/_12ssp"
                 android:textAllCaps="false"
                 android:textColor="@color/ColorWhite"
-                android:id="@+id/btnCancel"/>
+                android:textSize="@dimen/_12ssp" />
 
             <Button
+                android:id="@+id/btnOk"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_30sdp"
-                android:fontFamily="@font/manrope_bold"
+                android:layout_marginStart="@dimen/_5sdp"
                 android:background="@color/colorAccent"
+                android:fontFamily="@font/manrope_bold"
                 android:text="@string/ok"
                 android:textAllCaps="false"
-                android:textSize="@dimen/_12ssp"
-                android:layout_marginStart="@dimen/_5sdp"
                 android:textColor="@color/ColorWhite"
-                android:id="@+id/btnOk"/>
+                android:textSize="@dimen/_12ssp" />
 
 
         </LinearLayout>
@@ -223,14 +221,14 @@
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_5sdp"
+        android:autoLink="web"
         android:ellipsize="end"
-        android:visibility="gone"
         android:fontFamily="@font/manrope_bold"
         android:padding="@dimen/_10sdp"
         android:textColor="@color/ColorGray"
         android:textColorHint="@color/ColorGray"
         android:textSize="@dimen/_12ssp"
-        android:autoLink="web"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutWebUrl" />

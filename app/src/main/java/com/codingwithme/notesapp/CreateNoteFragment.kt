@@ -210,16 +210,16 @@ class CreateNoteFragment : BaseFragment(),EasyPermissions.PermissionCallbacks,Ea
     private fun saveNote(){
 
         if (etNoteTitle.text.isNullOrEmpty()){
-            Toast.makeText(context,"Note Title is Required",Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,"El titulo es obligatorio",Toast.LENGTH_SHORT).show()
         }
         else if (etNoteSubTitle.text.isNullOrEmpty()){
 
-            Toast.makeText(context,"Note Sub Title is Required",Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,"El subtitulo es obligatorio",Toast.LENGTH_SHORT).show()
         }
 
         else if (etNoteDesc.text.isNullOrEmpty()){
 
-            Toast.makeText(context,"Note Description is Required",Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,"La descripcion de la nota es obligatoria",Toast.LENGTH_SHORT).show()
         }
 
         else{
@@ -266,7 +266,7 @@ class CreateNoteFragment : BaseFragment(),EasyPermissions.PermissionCallbacks,Ea
             tvWebLink.visibility = View.VISIBLE
             tvWebLink.text = etWebLink.text.toString()
         }else{
-            Toast.makeText(requireContext(),"Url is not valid",Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(),"Url no es valido",Toast.LENGTH_SHORT).show()
         }
     }
 
