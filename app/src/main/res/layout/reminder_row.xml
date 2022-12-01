@@ -24,7 +24,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+        app:srcCompat="@android:drawable/ic_menu_recent_history" />
 
     <TextView
         android:id="@+id/reminder_time"

@@ -7,24 +7,29 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
 
         <Button
             android:id="@+id/btn_cancel_edit_task"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="4dp"
-            android:text="@string/Cancel"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/btn_redondo"
+            app:backgroundTint="#8BC34A"
+            app:icon="@drawable/abc_vector_test"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_reminders" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btn_end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="36dp"
-            android:text="@string/done"
+            android:background="@drawable/btn_redondo"
+            app:backgroundTint="#8BC34A"
+            app:icon="@android:drawable/ic_menu_send"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/btn_cancel_edit_task" />
 
@@ -32,22 +37,28 @@
             android:id="@+id/btn_date"
             android:layout_width="176dp"
             android:layout_height="41dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn_redondo"
             android:text="@string/btn_date"
+            android:textColor="#000000"
             android:textSize="10dp"
-            app:layout_constraintStart_toStartOf="@+id/txt_title_edit_task"
-            app:layout_constraintTop_toBottomOf="@+id/txt_title_edit_task" />
+            app:layout_constraintBottom_toTopOf="@+id/textview_date"
+            app:layout_constraintEnd_toStartOf="@+id/textView10"
+            app:layout_constraintStart_toEndOf="@+id/txt_title_edit_task"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textview_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="140dp"
             android:text="00/00/0000"
+            android:textColor="#FF03DAC5"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_date"
-            app:layout_constraintStart_toEndOf="@+id/btn_date"
-            app:layout_constraintTop_toBottomOf="@+id/txt_title_edit_task" />
+            app:layout_constraintBottom_toTopOf="@+id/rv_reminders"
+            app:layout_constraintStart_toEndOf="@+id/txt_title_edit_task"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txt_hour"
@@ -55,41 +66,56 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:text="00 : 00"
+            android:textColor="#FF03DAC5"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/textview_date"
             app:layout_constraintStart_toEndOf="@+id/textview_date"
             app:layout_constraintTop_toTopOf="@+id/textview_date" />
 
         <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/question_add_reminder"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_end" />
+
+        <TextView
             android:id="@+id/txt_title_edit_task"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:text="@string/task_title"
+            android:textColor="#ae3b76"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_cancel_edit_task" />
 
         <Button
             android:id="@+id/btn_add_reminder"
             android:layout_width="145dp"
             android:layout_height="38dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_redondo"
             android:text="@string/add_reminder"
+            android:textColor="#000000"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="@+id/btn_end"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/rv_reminders"
-            app:layout_constraintTop_toTopOf="@+id/rv_reminders" />
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_reminders"
-            android:layout_width="604dp"
-            android:layout_height="116dp"
-            android:layout_marginTop="4dp"
+            android:layout_width="500dp"
+            android:layout_height="220dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.167"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_date" />
+            app:layout_constraintHorizontal_bias="0.196"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
